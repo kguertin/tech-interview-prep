@@ -25,7 +25,7 @@ function findNemo(array) {
 }
 
 // O(n) ==> Linear Time -- time depends on number of inputs -- operations increase with inputs
-// findNemo(large);
+findNemo(large);
 
 // O(1) ==> Constant Time --- number or operations stays flat
 const boxes = [1, 2, 3, 4, 5, 6, 7, 8];
