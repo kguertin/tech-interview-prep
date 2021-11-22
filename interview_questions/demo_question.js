@@ -33,3 +33,16 @@ function containsCommonItem(arr1, arr2) {
 }
 
 console.log(containsCommonItem(array1, array2));
+
+// array 1 to object: {
+// a: true,
+// b: true
+// c: true
+// x: true
+// }
+// array2[index] === obj.properties
+
+function containsCommonItem2(arr1, arr2) {
+  // loops through first array and create object where properties === items in the array
+  // loop through second array and check if item in second array existed on created object
+}
