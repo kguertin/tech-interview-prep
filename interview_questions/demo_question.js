@@ -19,7 +19,7 @@
 // explain why this isn't the best.
 
 const array1 = ['a', 'b', 'c', 'x'];
-const array2 = ['z', 'y', 'i'];
+const array2 = ['z', 'y', 'x'];
 
 function containsCommonItem(arr1, arr2) {
   for (let i = 0; i < arr1.length; i++) {
@@ -44,5 +44,21 @@ console.log(containsCommonItem(array1, array2));
 
 function containsCommonItem2(arr1, arr2) {
   // loops through first array and create object where properties === items in the array
+  let map = {};
+  for (let i = 0; i < arr1.length; i++) {
+    if (!map[arr1[i]]) {
+      const item = arr1[i];
+      map[item] = true;
+    }
+  }
+
   // loop through second array and check if item in second array existed on created object
+  for (let j = 0; j < arr2.length; j++) {
+    if (map[arr2[j]]) {
+      return true;
+    }
+  }
+  return false;
 }
+
+console.log(containsCommonItem2(array1, array2));
