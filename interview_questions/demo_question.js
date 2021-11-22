@@ -60,5 +60,13 @@ function containsCommonItem2(arr1, arr2) {
   }
   return false;
 }
-
+// This is better for time complexity
+// space complexity of O(a)
 console.log(containsCommonItem2(array1, array2));
+
+// this is more readable, but may be language specific.
+function containsCommonItem3(arr1, arr2) {
+  return arr1.some((item) => arr2.includes(item));
+}
+
+console.log(containsCommonItem3(array1, array2));
