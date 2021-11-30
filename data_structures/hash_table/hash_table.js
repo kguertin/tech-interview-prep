@@ -13,7 +13,7 @@ class HashTable {
 
   set(key, value) {
     const hash = this._hash(key);
-    this.data[Math.floor(Math.random() * 50)] = [hash, value];
+    this.data[Math.floor(Math.random() * this.data.length)] = [hash, value];
   }
 
   get(key) {
