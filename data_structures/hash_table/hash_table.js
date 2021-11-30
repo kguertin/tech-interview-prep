@@ -10,6 +10,17 @@ class HashTable {
     }
     return hash;
   }
+
+  set(key, value) {
+    const hash = this._hash(key);
+    this.data[Math.floor(Math.random() * 50)] = [hash, value];
+  }
+
+  get(key) {
+    const hash = this._hash(key);
+    const item = this.data.find((i) => i && i[0] === hash);
+    return item ? item[1] : null;
+  }
 }
 
 const myHashTable = new HashTable(50);
